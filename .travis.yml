@@ -5,6 +5,9 @@
  before_install:
   - chmod +x gradlew
  
+ after_failure:
+  - cat file:///home/travis/build/evivar/Gradle/build/reports/tests/test/index.html
+ 
  jdk:
    - oraclejdk8
    - oraclejdk9
