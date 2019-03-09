@@ -9,8 +9,10 @@
    - oraclejdk8
    - oraclejdk9
    - openjdk8
-   
-notifications:
+ 
+ script: gradlew check --info
+
+ notifications:
   email:
     recipients:
       - evivar@ucm.es
