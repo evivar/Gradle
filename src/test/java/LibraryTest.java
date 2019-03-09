@@ -13,10 +13,10 @@ public class LibraryTest {
     }
     
     @Test
-    public void testSumaQueVaAFallar() {
+    public void testSumaQueAhoraVaAPasar() {
     	int a = 0;
     	int b = 0;
     	Library classUnderTest = new Library();
-    	assertEquals(1, classUnderTest.suma(a,  b));
+    	assertEquals(0, classUnderTest.suma(a,  b));
     }
 }
