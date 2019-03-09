@@ -1,12 +1,10 @@
-  sudo: true
+ sudo: true
   
-  language: java
+ language: java
   
-  script: gradle check
-  
-  jdk:
-    - oraclejdk8
-    - oraclejdk9
-    - openjdk8
+ jdk:
+   - oraclejdk8
+   - oraclejdk9
+   - openjdk8
   
   
