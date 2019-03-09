@@ -10,7 +10,7 @@
    - oraclejdk9
    - openjdk8
  
- script: gradle check --stacktrace
+ script: gradle check --debug
 
  notifications:
   email:
