@@ -10,7 +10,7 @@
    - oraclejdk9
    - openjdk8
    
-  script:
+ script:
   - ./gradlew clean publish -i --continue
   - ./gradlew -b finalize.gradle finalize -i
 
