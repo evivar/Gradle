@@ -1,8 +1,10 @@
   language: java
   
+  script: gradle check
+  
   jdk:
-  - oraclejdk8
-  - oraclejdk9
-  - openjdk8
+    - oraclejdk8
+    - oraclejdk9
+    - openjdk8
   
   
