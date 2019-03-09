@@ -1,7 +1,10 @@
  sudo: true
-  
+ 
  language: java
-  
+ 
+ before_install:
+  - chmod +x gradlew
+ 
  jdk:
    - oraclejdk8
    - oraclejdk9
