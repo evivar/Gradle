@@ -8,12 +8,7 @@
  jdk:
    - oraclejdk8
    - openjdk8
- 
- before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
- 
+   
  script: gradle check --debug
 
  notifications:
@@ -22,4 +17,16 @@
       - evivar@ucm.es
     on_success: always # default: change
     on_failure: always # default: always
+ 
+ before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "evivar"
+      - git config --local user.email "evivar@ucm.es"
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+      - git tag $TRAVIS_TAG
+    deploy:
+      provider: releases
+      api_key: "GITHUB OAUTH TOKEN"
+      file: "FILE TO UPLOAD"
+      skip_cleanup: true
   
