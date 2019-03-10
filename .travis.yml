@@ -27,5 +27,6 @@
  deploy:
     provider: releases
     api_key: "2d9c572672b76ac2c3a8b810bd15d0bd78c8d7f6"
+    file: Gradle/*
     skip_cleanup: true
   
